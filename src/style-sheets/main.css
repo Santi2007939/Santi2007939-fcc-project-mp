@@ -9,6 +9,8 @@
   background-color: #93BFCF;
   padding-top: 5px;
   padding-bottom: 10px;
+  min-height: 100vh;
+  height: 100%;
 }
 .App .editor {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

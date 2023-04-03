@@ -97,7 +97,7 @@ function App() {
           <FontAwesomeIcon icon={faMarkdown} className='editor__header__title__icon' /> Editor
           </div>
           <div className='editor__header__icons'>
-            <FontAwesomeIcon icon={faRotateBack} className='editor__header__icons__back' onClick={(e) => {document.getElementById('editor').value=respaldo}} />
+            <FontAwesomeIcon icon={faRotateBack} className='editor__header__icons__back' onClick={(e) => {document.getElementById('editor').value=respaldo, setInput(respaldo)}} />
             <FontAwesomeIcon icon={faTrash} className='editor__header__icons__trash' onClick={(e) => {document.getElementById('editor').value=''; setInput('')}} />
             <FontAwesomeIcon icon={iconos[iedit]} className='editor__header__icons__change' onClick={() => {
               if (iedit == 0) {
