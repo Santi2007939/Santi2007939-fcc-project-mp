@@ -1,0 +1,191 @@
+@use './color' as *;
+@use './mixins.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+
+    background-color: $blue;
+    padding-top: 5px;
+    padding-bottom: 10px;
+
+    .editor {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 80%;
+        max-width: 550px;
+        margin: 15px auto;
+        border: black solid 2px;
+        font-family: 'Source Sans Pro', sans-serif;
+        margin-top: 40px;
+
+        &__none {
+            display: none;   
+        }
+        
+        &__bigger {
+            height: 780px;
+            padding-bottom: 0px;
+            margin-bottom: 10px;
+        }
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding: 4px 10px;
+            background-color: $darkBlue;
+            color: $white;
+
+            &__title {
+                &__icon {
+                    margin-right: 2px;
+                }
+            }
+
+            &__icons {
+                
+                &__trash {
+                    margin-right: 10px;
+                    @include hover;
+                }
+
+                &__back {
+                    margin-right: 10px;
+                    @include hover;
+                }
+
+                &__change {
+                    @include hover;
+                }
+            }
+        }
+
+        &__text {
+            width: 100%;
+            border: none;
+            padding: 5px;
+            font-family: 'Source Sans Pro', sans-serif;
+            resize: vertical;
+            min-height: 190px;
+            margin-bottom: -4px;
+            background-color: $lightBlue;
+
+            &__bigger {
+                min-height: 96.4%;
+                max-height: max-content;
+            }
+        }
+    }
+
+    .previewer {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 80%;
+        max-width: 700px;
+        margin: 15px auto;
+        border: black solid 2px;
+        font-family: 'Source Sans Pro', sans-serif;
+        
+        &__none {
+            display: none;
+        }
+
+        code {
+            background-color: white;
+            width: auto;
+        }
+
+        pre {
+            display: block;
+            overflow: auto;
+            background-color: white;
+            max-width: 98%;
+        }
+
+        h1 {
+            border-bottom: 2px solid black;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        h2 {
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        
+        h3 {
+            font-size: 17px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+
+        blockquote {
+            border-left: green 2px solid;
+            color: green;
+            padding-left: 5px;
+            margin-left: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        tr {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 1px 3px;
+            border: 2px solid green;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        img {
+            max-width: 98%;
+        }
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding: 4px 10px;
+            background-color: $darkBlue;
+            color: $white;
+
+            &__title {
+                &__icon {
+                    margin-right: 2px;
+                }
+            }
+
+            &__icons {
+                &__change {
+                    @include hover;
+                }
+            }
+        }
+
+        &__result {
+            width: 100%;
+            border: none;
+            padding: 10px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 19px;
+            line-height: 38px;
+            background-color: $lightBlue;
+        }
+    }
+}
